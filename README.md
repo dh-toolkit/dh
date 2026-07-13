@@ -1,2 +1,3 @@
-# dh
-Digital Humanities
+**convert_text_to_tei.py** turns a plain-text novel excerpt into TEI P5 XML for digital humanities work. It reads the .txt file, normalizes paragraph breaks (including merged line wraps), detects Chapter headings, and writes a teiHeader plus a text/body with one <p> per passage, each with a stable xml:id (p00001, …). That structure is the foundation for the rest of the project: exporting rows for cultural categories, embedding annotations in TEI, and running Python or BaseX reports. Default input/output paths are set at the top of the script; you can override them on the command line.
+
+python convert_text_to_tei.py ".\Possession_1000.txt" -o ".\Possession_test.tei.xml"
